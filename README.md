@@ -38,4 +38,40 @@ for openmp
  
  where 1000 is the size of matrix, 0 is the seed, and 4 is the number of threads
  
+ ### CS451 Assignment 2
+
+there are four files
+
+1. gaussmpi.c and its executable gaussmpi
+2. gauss_serial.c and its executable gauss_s
+
+
+how to compile
+
+to compile the implementation of mpi
+use the following command
+
+mpicc -o outputname inputfile
+
+example: mpicc -o gaussmpi gaussmpi.c
+
+to run the implementation of mpi
+
+mpirun -np threadnumber executablename m matrixsize seedvalue
+
+example: mpirun -np 4 ./gaussmpi 9 0
+
+
+to compile the implementation of gauss in serial
+use the following command
+
+gcc  Cfile -o outputfilename
+
+example: gcc  gauss_serial.c -o gauss_serial
+
+
+
+
+ 
+ 
  
